@@ -6,6 +6,13 @@ const bot = new dbd.Bot({
 	prefix: "!"
 })
 
+bot.musicEndCommand({ //command
+    channel: "$channelID",
+    code: `$title[Stoppe Song]
+$description[Die Musik liste ist zu ende. Verlassen den channel!]
+$color[RED]`
+})
+
 bot.musicStartCommand({
     channel: "$channelID",
     code: `$title[Spiele Song]
@@ -23,7 +30,7 @@ bot.onMessage()
 bot.command({
     name: "play",
 	aliases: ["p"],
-    code: `$playSong[$message;:x: Songe konnte nicht abgespielt werden!]
+    code: `$playSong[$message;:x: Songe konnte nicht abgespielt werden.]
 	$argsCheck[>1;Benutze: !play <song name>]`
 })
 
@@ -44,9 +51,16 @@ bot.command({
 bot.command({
 	name: "volume",
 	aliases: ["v"],
-	code: `Die lautstärke wurde zu $message[1] gestellt!
-	$argsCheck[1;Benutze: !volume <nummer>]
-	$volume[$message]`
+	code: `$if[$message>100]
+	Die lautstärke kann nicht über 100% werden!
+	$elseIf[$message==0]
+	Die lautstärke darf nicht bei 0% liegen!
+	$endelseIf
+	$else
+	Die lautstärke wurde zu $message[1]% gestellt.
+	$volume[$message]
+	$endif
+	$argsCheck[1;Benutze: !volume <nummer>]`
 })
 
 bot.command({
