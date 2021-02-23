@@ -25,6 +25,12 @@ $footer[Gemacht von byCRXHIT]
     $clear[1]`
 })
 
+/*
+	Bei Problemen oder fragen
+	einfach mich anschreiben: byCRXHIT#0001
+	Oder ein Issue aufmachen.
+*/
+
 bot.onMessage()
 
 bot.command({
