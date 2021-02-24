@@ -1,6 +1,6 @@
 # Was ihr braucht:
 - NodeJS
-- DBD.JS npm package (version 2.0.0)
+- DBD.JS npm package (version 2.1.0)
 - ffmpeg
 
 # Wie man es benutzt:
