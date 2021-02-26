@@ -6,7 +6,7 @@ const bot = new dbd.Bot({
 	prefix: "!"
 })
 
-bot.musicEndCommand({ //command
+bot.musicEndCommand({
     channel: "$channelID",
     code: `$title[Stoppe Song]
 $description[Die Musik liste ist zu ende. Verlassen den channel!]
