@@ -59,8 +59,8 @@ bot.command({
 	aliases: ["v"],
 	code: `$if[$message>100]
 	Die lautstärke kann nicht über 100% werden!
-	$elseIf[$message==0]
-	Die lautstärke darf nicht bei 0% liegen!
+	$elseIf[$message<1]
+	Die lautstärke darf nicht bei weniger als 0% liegen!
 	$endelseIf
 	$else
 	Die lautstärke wurde zu $message[1]% gestellt.
