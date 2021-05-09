@@ -1,6 +1,6 @@
 # Was ihr braucht:
 - NodeJS
-- Aoi.js npm package (version 1.0.0)
+- Aoi.js npm package (version 1.0.6)
 - ffmpeg
 
 # Wie man es benutzt:
